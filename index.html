@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" type="image/png" href="images\logos\profile.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Righteous&family=Roboto&display=swap" rel="stylesheet">
+    <title>Painel Alunos | HYPE</title>
+</head>
+<body>
+    <div class="banner">
+        <h1 class="banner__title"><span style="color: orange;" >ALUNOS</span><br>INSCRITOS<span style="color: orange;" >.</span></h1>
+        <img class="banner__image" src="images\img\user-logo.png" alt="Imagem aluno">
+        <img class="banner__logo" src="images\logos\logo-marca.png" alt="logo HYPE cursos">
+    </div>
+    <div class="menu__buttons">   
+        <button class="menu__buttons--edit">EDITAR</button>
+        <button class="menu__buttons--add">ADICIONAR</button>
+        <input class="menu__searchbar" type="search" placeholder="Procurar Alunos..."></input>
+        <span id="buttons--search" class= " material-icons">person_search</span>
+    </div>
+    <div class="menu__buttons__mobile">
+        <input class="menu__searchbar__mobile" type="search" placeholder="Procurar Alunos..."></input>
+        <span id="buttons__mobile--arrowback" class= "material-icons">arrow_back</span>
+    </div>
+    <div class="modal--blur">
+        <div class="modal__add" autocomplete="off">
+            <img class="modal__add__picture__default" src="images\logos\profile.png" alt="Foto de perfil padrão">
+            <span class="modal__add__subtitle">Foto de perfil</span>
+            <span class="modal__add__subtitle__mobile">Selecionar Imagem</span>
+            <input class="modal__add__picture__input" name="upload-img" type="file" class="upload"  accept="image/*" required></input>
+            <button class="modal__add__picture__button" onclick="document.querySelector('.modal__add__picture__input').click()">Enviar</button>
+            <h1 class="modal__add__title">Cadastrar Novo Aluno </h1>
+            <form class="modal__add__form"> 
+                <div>
+                    <input class="modal__input add-name" name="name" type="text" placeholder="Nome Completo" autocomplete="off"></input>
+                    <input class="modal__input add-cpf" name="cpf" type="text" maxlength="14" placeholder="CPF" autocomplete="off"></input>
+                    <input class="modal__input add-birtday" name="birtday" type="text" maxlength="10" placeholder="Data Nascimento" autocomplete="off"></input>
+                    <input class="modal__input add-cellphone" name="cellphone" type="text" maxlength="14" placeholder="Telefone" autocomplete="off"></input>
+                    <input class="modal__input add-email" name="email" type="email" placeholder="Email"></input>
+                </div>
+            </form>
+            <button class="modal__add__button--save">SALVAR</button>
+            <button class="modal__add__button--update">ATUALIZAR</button>
+            <span class="modal__button__close">&#215;</span>
+        </div>
+    </div>
+    <div class="main">
+        <div class="main__content">
+            <table>
+            <tr><td>Ana Caroline Pistjck</td></tr>
+            <tr><td>458.751.658-75</td></tr>
+            <tr><td>30/12/1987</td></tr>
+            <tr><td>(11)93518-7824</td></tr>
+            <tr><td>carolina@gmail.com</td></tr>
+            </table>
+            <img class="main__picture__studant" src="images\students\ana.jpg">  
+            <div class="main__button--delete">×</div>
+        </div>
+        <div class="main__content">
+                <table>                     
+                <tr><td>Gustavo Lima Cantor</td></tr>
+                <tr><td>651.312.788-12</td></tr>
+                <tr><td>07/12/1989</td></tr>
+                <tr><td>(11)98768-7897</td></tr>
+                <tr><td>gusta1998cantor@outlook.com</td></tr>
+                </table>
+                <img class="main__picture__studant" src="images\students\gustavo.jpg">
+                <span class="main__button--delete">×</span>   
+        </div>
+        <div class="main__content">
+                <table>
+                <tr><td>Predo Henrique Magalhães S. P.</td></tr>
+                <tr><td>248.231.718-321</td></tr>
+                <tr><td>22/08/1990</td></tr>
+                <tr><td>(11)95558-1551</td></tr>
+                <tr><td>pedrohenrique2022@gmail.com</td></tr>
+                </table>
+                <img class="main__picture__studant" src="images\students\pedro.jpg">
+                <span class="main__button--delete">×</span>               
+        </div>
+        <div class="main__content">   
+                <table>       
+                <tr><td>Renato Silva Santos</td></tr>
+                <tr><td>655.895.621-01</td></tr>
+                <tr><td>02/09/1991</td></tr>
+                <tr><td>(11)96521-7234</td></tr>
+                <tr><td>renato.silva.santos@gmail.com</td></tr>
+                </table>
+                    <img class="main__picture__studant" src="images\students\renato.jpg">
+                <span class="main__button--delete">×</span>
+        </div>      
+    </div>
+
+    <div class="bar__mobile">         
+        <span id="bar__mobile__button__edit" class="material-icons">edit</span>
+        <span id="bar__mobile__button__search" class="material-icons">search</span>
+        <span id="bar__mobile__button__add" class="material-icons">add</span>       
+    </div>
+    <div class="popup__notfound">
+        <h1 class="popup__notfound__text">Aluno não encontrado</h1>
+        <div id="popup__notfound__icon" class="material-icons">sentiment_neutral</div>
+    </div>
+    <div class="popup__delete">
+        
+        <div id="popup__delete__icon" class="material-icons">sms_failed</div>
+        <div class="popup__delete__message">
+            <h2>VOCÊ TEM CERTEZA ?</h2>
+            <p>A exlusão é permanente e não há como cancelar após confirmar, deseja continuar ?</p>
+        </div>
+        <button class="popup__delete__button__cancel">Cancelar</button>
+        <button class="popup__delete__button__continue">Continuar</button>
+    </div>
+    <div class="popup__edit">
+        <button class="popup__edit__button__cancel">Cancelar</button>
+        <button class="popup__edit__button__save">Salvar</button>
+    </div>
+    <script src="/Components/input.js"></script>
+    <script src="/Components/editInfo.js"></script>
+    <script src="/Components/inputMask.js"></script>
+    <script src="/Components/search.js"></script>
+</body>
+</html>
