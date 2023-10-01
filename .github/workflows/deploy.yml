@@ -1,0 +1,15 @@
+name: deploy
+on: workflow_dispatch
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: up9cloud/action-rsync@master
+        env:
+          HOST: ${{secrets.HOST}}
+          USER: ${{secrets.USER}}
+          KEY: ${{secrets.SSH_KEY}}
+          TARGET: ${{secrets.TARGET}}
+          SOURCE: ${{secrets.SOURCE}}
+          VERBOSE: true
